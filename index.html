@@ -30,7 +30,7 @@
 
     .glitter-text {
       font-family: 'Georgia', serif;
-      font-size: clamp(2.5rem, 8vw, 6rem);
+      font-size: clamp(3.5rem, 12vw, 9rem);
       font-weight: bold;
       background: linear-gradient(
         90deg,
@@ -51,7 +51,8 @@
       filter: drop-shadow(0 0 8px rgba(255, 200, 100, 0.8))
                drop-shadow(0 0 20px rgba(255, 150, 200, 0.6));
       letter-spacing: 0.05em;
-      white-space: nowrap;
+      text-align: center;
+      line-height: 1.15;
     }
 
     @keyframes shimmer {
@@ -90,7 +91,7 @@
     }
 
     .emoji {
-      font-size: clamp(6rem, 22vw, 16rem);
+      font-size: clamp(12rem, 44vw, 32rem);
       line-height: 1;
       animation: pulse 1.4s ease-in-out infinite;
       filter: drop-shadow(0 0 30px rgba(255, 100, 180, 0.7))
@@ -116,7 +117,7 @@
 
   <div class="top">
     <div class="stars" id="stars"></div>
-    <span class="glitter-text">Gyönyörű vagy!</span>
+    <span class="glitter-text">Gyönyörű<br>vagy!</span>
   </div>
 
   <div class="bottom">
