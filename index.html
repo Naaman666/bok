@@ -30,7 +30,7 @@
 
     .glitter-text {
       font-family: 'Georgia', serif;
-      font-size: clamp(3.5rem, 12vw, 9rem);
+      font-size: clamp(5rem, 16vw, 12rem);
       font-weight: bold;
       background: linear-gradient(
         90deg,
@@ -47,17 +47,30 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      animation: shimmer 2.5s linear infinite;
+      animation: shimmer 2.5s linear infinite, textPulse 1.4s ease-in-out infinite;
       filter: drop-shadow(0 0 8px rgba(255, 200, 100, 0.8))
                drop-shadow(0 0 20px rgba(255, 150, 200, 0.6));
       letter-spacing: 0.05em;
       text-align: center;
-      line-height: 1.15;
+      line-height: 2.3;
     }
 
     @keyframes shimmer {
       0%   { background-position: 0% center; }
       100% { background-position: 200% center; }
+    }
+
+    @keyframes textPulse {
+      0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 8px rgba(255, 200, 100, 0.8))
+                drop-shadow(0 0 20px rgba(255, 150, 200, 0.6));
+      }
+      50% {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 18px rgba(255, 220, 80, 1))
+                drop-shadow(0 0 40px rgba(255, 150, 220, 0.9));
+      }
     }
 
     /* Sparkling stars around the text */
